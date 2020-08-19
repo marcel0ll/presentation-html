@@ -1,120 +1,107 @@
-# HTML é tudo que você precisa!
+# HTML is all you need!
 
-> Material para acompanhar apresentação online de HTML no
+> Text written to accompany a presentation about HTML on an online
 > [meetup](https://www.meetup.com/opensanca/events/272507261/)
 
-[Esse repositório](https://github.com/marcel0ll/apresentacao-html) contém o
-código de um [editor em tempo
-real](https://marcel0ll.github.io/apresentacao-html) para que você possa
-acompanhar ver alguns exemploes ou experimentar por conta própria. Lembre que
-aprender é um processo ativo e não passivo!
+[This repository](https://github.com/marcel0ll/presentation-html) contains a
+[live editor](https://marcel0ll.github.io/presentation-html) that you can see
+some HTML examples or experiment on your own. Remember that learning is an
+active process and not passive!
 
-Hoje em dia é fácil nos perdermos na pletora de bibliotecas para javascript,
-tentando criar um site e esquecemos que para se criar um site você não precisa
-de javascript. O velho HTML é mais do que suficiente e por mais que eu acredite
-ser benéfico adicionar javascript ao seu site, é sempre importante saber muito
-bem o básico.
+Nowadays is easy to get lost on the plethora of javascript frameworks, trying to
+create your website and forgetting that to create a website you don't need no
+javascript. Plain old HTML is more than enough and although I do belive that
+adding javascript might benefit your website, it's always for the best to know
+the basics very well.
 
-Então hoje eu vou acompanhar você no básico do básico de HTML, como o seu
-navegador lê e renderiza ele, um pouco sobre o que é uma requisição HTTP e
-apontar onde o CSS entre na jogada, mas não entrarei em muitos detalhes de CSS.
+So today I am going to walk you through the very basics of html, how your
+browser reads and renders it, a little bit of what is an HTTP request and point
+out where CSS comes in play, but I won't get into much details about CSS.
 
-## O que é HTML?
+## What is HTML?
 
-HTML significa linguagem de marcação de hyper texto e é uma [linguagem de
-programação declarativa sem completude de
-Turing](https://www.youtube.com/watch?v=4A2mWqLUpzw).  E isso por sua vez
-significa que não é possível fazer tudo com HTML e que não é uma linguagem que
-vocẽ vai listar ordens para o computador e sim 'explicar' para o computador como
-você quer algo.
+HTML stands for hyper text markup language and it is a [declarative programming
+language that is not turing
+complete](https://www.youtube.com/watch?v=4A2mWqLUpzw).
 
-O HTML foi inventado no começo da internet para troca fácil de documentos pela
-rede mundial de computadores (WWW) usando o protocolo HTTP, uma de suas funções
-mais inovadoras foi que um documento pode estar conectado a quantos outros
-documentos alguém quiser. Isso é a base do que você usa hoje no seu navegador.
+It was invented in the beginning of the internet to easily exchange written
+documents across the world wide web (WWW) using http, one of it's most
+innovative features was that a document could be linked to as many other
+documents as someone wanted.  This is the base of what you today use on your
+browser.
 
-## O que é HTTP?
+## What is HTTP?
 
-HTTP significa protocolo de transferência de hyper texto, e como nome já diz tem
-uma forte relação com HTML, pelo menos quanto a quando e por que foi inventado.
+HTTP stands for hyper text transfer protocol, and as the name implies it has
+strong relations with HTML, at least for when and why it was invented.
 
-HTTP é um protocolo de transferência construído em cima do protocolo de controle
-de transmissão (TCP) para transferir arquivos através da WWW de forma confiável
-permitindo a existência de sistemas de informação de hyper mídia. Em outras
-palavras é o que permite você clicar em um link e abrir outra página ou a foto
-de um gato.
+HTTP is a transfer protocol built on top of the Transmission Control
+Protocol(TCP) to reliable transfer files across the WWW enabling hypermedia
+information systems. In other words, it allows you to click a link and open
+another page or a cat picture. 
 
-> Nota: HTTP pode ser adaptado para usar o protocolo de datagrama de usuário
-> (UDP)
+> Note: HTTP can be adapted to use User Datagram Protocol(UDP)
 
-## Como o navegador interage com tudo isso?
+## How the browser interacts with all this?
 
-Um navegador é basicamente um cliente de HTTP que requisita arquivos atravéz da
-internet. Ele busca um arquivo de um servidor HTTP.
+A Browser is basically a an HTTP client that requests files across the web, in
+other words it fetchs a file from a server, an HTTP server.
 
-> Nota: Uma página na internet é um arquivo
+So when you open google.com you request the server responsible for this domain
+(google.com) the address "/" and as a response google sends you an HTML file
+that your browser will render!
 
-Então quando você abre o google.com, o navegador requisita ao servidor que está
-responsável por esse domínio (google.com) o endereço "/" e o servidor de
-responde com um arquivo HTML que seu navegador irá imprimir na tela!
+> Note: Right click on browser and look at the page's source code, what you will
+> see is a big HTML file.
 
-> Nota: Clica com o botão direito no seu navegador e olhe o código fonte da
-> página, o que você irá ver é um grande arquivo HTML
+> Note: Some parts of a page are actually rendered by your operating system(OS)
+> and not by the browser. One example is dropdown menus (<select>) that will
+> look in one way on your computer and a totally different way on your mobile
+> phone.
 
-> Nota: Aglumas partes do seu site são impressas na verdade pelo seu sistema
-> operacional (SO) e não pelo navegador. Um exemplo disso são menus de listagem
-> (<select>) que no seu computador irão aparecer de um jeito e em celulares
-> aparecem de um jeito completamente diferente.
+## What can I write in HTML?
 
-## O que posso escrever com HTML?
+Basically text, a lot of it. 
 
-Basicamente texto, muito texto.
+You can also point to other files and your browser will do its best to render
+it. For example you might want to show an image alongside your beatiful text, so
+what you do is you write some markup that points to another file (an image) that
+your browser will make a second request on the background, will get its response
+and renders it in your page view.
 
-Como já dito antes, você também pode apontar para outros arquivos que não são
-HTML e seu navegador se esforçará ao máximo para mostrá-los. Por exemplo, você
-talvez queira mostrar uma imagem ao lado do seu lindo texto, então o que você
-faz é escrever marcação que aponta para outro arquivo (uma imagem) e seu
-navegador fará uma segunda requisição por trás das cortinas, pegará a resposta e
-irá imprimir a imagem na tela.
+Note that although most of the common browsers will embed the image file into
+the document, not all browsers are like that or may be configured to not do
+that. This is the case for browsers like [Lynx](https://lynx.browser.org/), a
+terminal based browser that as far as I know only displays texts.
 
-Note que por mais que é muito comum navegadores encaixarem o arquivo de imagem
-dentro da mesma visão da página, nem todo navegador é assim ou podem ser
-configurados de forma diferente. Isso é o caso em navegadores como o
-[Lynx](https://lynx.browser.org/), um navegador de terminal que até onde seu só
-mostra textos.
+Some people might configure a browser not to load images to test accessibility,
+simulate a text browser or they might just not like images.
 
-Algumas pessoas podem configurar o navegador para não carregar imagens para
-testar acessibilidade, simular um navegador textual ou eles podem simplesmente
-não gostar de imagens.
+## HTML syntax
 
-## Sintaxe do HTML
+HTML is written using tags that are written like `<tag></tag>`, each tag has its
+purpose: add content inside the document, add information about the document or
+add semantic structure to the document.
 
-HTML é escrito usando tags do tipo `<tag></tag>`, cada tag tem o seu propósito:
-adicionar conteúdo dentro do documento, adicionar informação sobre o documento
-ou adicionar estrutura semantica ao documento.
+Inside each tag you can declare multiple attributes using the syntax `key="key"`
+or just `key`. Like, `<div class="button" disabled>New post</div>`.
 
-Dentro de cada tag você pode declarar multiplos atributos using a sintaxe
-`chave="valor"` ou só `chave`, como por exemplo: `<div class="button" disabled>
-Novo artigo </div>`.
+Most of HTML tags needs an opening (`<>`) and ending (`</>`), but some can be
+opened and closed at once: `<input type="text" />`.
 
-Maioria das tags de HTML precisa ter abertura (`<>`) e fechamento (`</>`), mas
-algumas podem ser abertas e fechadas com uma única declaração: `<input
-type="text" />`.
-
-Essa é uma imagem muito legal de uma "tabela periódica de HTML" feito pelo
-Castus e que eu encontrei na [Smashing
+Here is a nice picture of an "html periodic table" by Castus that I've found on
+[Smashing
 Magazine](https://www.smashingmagazine.com/2015/05/desktop-wallpaper-calendars-june-2015/#periodic-table-of-html5-elements)
 
-![Tabela periódica HTML](./html-periodic-table.jpg)
+![HTML periodic table](./html-periodic-table.jpg)
 
-Esse eram todas as tags que existiam quando a table foi feita em 2015, hoje pode
-estar um pouco diferente.
+Those are all HTML tags that existed when this table was designed in 2015,
+nowadays there might be some small differences.
 
+I created some HTML examples that you can find in [this
+editor](https://marcel0ll.github.io/presentation-html)
 
-Eu criei uma série de exemplos de HTML que podem ser encontrados [nesse
-editor](https://marcel0ll.github.io/apresentacao-html) 
-
-Espero que tenha aproveitado, continue programando!
+Hope you enjoyed, keep coding!
 
 marcel0ll
 
