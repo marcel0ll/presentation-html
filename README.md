@@ -55,9 +55,10 @@ that your browser will render!
 > see is a big HTML file.
 
 > Note: Some parts of a page are actually rendered by your operating system(OS)
-> and not by the browser. One example is dropdown menus (<select>) that will
+> and not by the browser. One example is dropdown menus (`<select>`) that will
 > look in one way on your computer and a totally different way on your mobile
 > phone.
+
 
 ## What can I write in HTML?
 
